@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="start-button">
+      <div class="start-modal">
+        <label for="player-name">Enter your name:</label>
+        <input type="text" id="player-name" maxlength="20" placeholder="Your name" />
+        <button onclick="startGame()">Start Game</button>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="name">Hello: <span>Unknown</span></div>
+      <div class="tries">Wrong tries: <span>0</span></div>
+      <div class="timer">Time: <span>0:00</span></div>
+    </div>
+
+    <div class="container">
+      <div class="box" club="arsenal">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_arsenal_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="arsenal">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_arsenal_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="chelsea">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_chelsea_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="chelsea">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_chelsea_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="liverpool">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_liverpool_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="liverpool">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_liverpool_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="manCity">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_manchester-city_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="manCity">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_manchester-city_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="manUnited">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_manchester-united_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="manUnited">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/england_manchester-united_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="psg">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/france_paris-saint-germain_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="psg">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/france_paris-saint-germain_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="bayern">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/germany_bayern-munchen_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="bayern">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/germany_bayern-munchen_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="juvi">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/italy_juventus_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="juvi">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/italy_juventus_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="barca">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/spain_barcelona_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="barca">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/spain_barcelona_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="madrid">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/spain_real-madrid_512x512.png" alt="" />
+        </div>
+      </div>
+      <div class="box" club="madrid">
+        <div class="face"></div>
+        <div class="back">
+          <img src="/MemoryGame/Images/spain_real-madrid_512x512.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="game-over" style="display: none;">
+      <div class="modal">
+        <p>Congratulations! You matched all teams in <span id="tries"></span> wrong tries and <span id="final-time"></span></p>
+        <p>Best score: <span id="best-score">None</span></p>
+        <button onclick="resetGame()">Play Again</button>
+        <button onclick="this.parentElement.parentElement.style.display='none'">Close</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
